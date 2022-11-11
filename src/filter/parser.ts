@@ -36,6 +36,7 @@ export class FilterParser {
   }
 
   private transform(v: string | FilterableParameters) {
+    if (typeof v === 'string' && v[0] === '{') v = JSON.parse(v);
     if (v instanceof Array) {
       for (const k of v) {
         this.transform(k);

@@ -26,7 +26,7 @@ export class CollectionDto {
   readonly filter?: FilterableParameters;
 
   @ApiPropertyOptional({
-    example: '-created_at;filename',
+    example: '-createdAt;updatedAt',
     description:
       'Use only allowed properties separated by semicolon; default is ascending created_at; prefix name with hyphen/minus sign to get descending order',
     type: String,
@@ -48,6 +48,7 @@ export class CollectionDto {
   readonly limit?: number = 10;
 }
 
-function filterQueryToObject(v: string): Record<string, unknown> {
-  return JSON.parse(v);
+function filterQueryToObject(v: string) {
+  if (typeof v === 'string') v = JSON.parse(v);
+  return v;
 }

@@ -1,3 +1,6 @@
+# Important
+The original project corresponds to [@forlagshuset/nestjs-mongoose-paginate](https://www.npmjs.com/package/@forlagshuset/nestjs-mongoose-paginate) . I just modified a few lines to get out of a jam
+
 # nestjs-mongoose-paginate
 
 A pagination, filtering and sorting lib for nestjs v8(for v7 please use < v1.1) using mongoose orm
@@ -15,7 +18,7 @@ In case you want to expose some of the properties with a different name, you nee
 import {
   CollectionProperties,
   Expose
-} from '@forlagshuset/nestjs-mongoose-paginate';
+} from '@saemhco/nestjs-mongoose-paginate';
 
 export class MyCollectionProperties extends CollectionProperties {
   @Expose({ name: 'createdAt', sortable: true })
@@ -35,7 +38,7 @@ import {
   CollectionDto,
   ValidationPipe,
   CollectionResponse
-} from '@forlagshuset/nestjs-mongoose-paginate';
+} from '@saemhco/nestjs-mongoose-paginate';
 
 @Controller()
 export class AppController {
@@ -58,7 +61,7 @@ import {
   CollectionDto,
   DocumentCollector,
   CollectionResponse
-} from '@forlagshuset/nestjs-mongoose-paginate';
+} from '@saemhco/nestjs-mongoose-paginate';
 
 @Injectable()
 export class AppService {
