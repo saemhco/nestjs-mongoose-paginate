@@ -1,6 +1,6 @@
 {
   "name": "@saemhco/nestjs-mongoose-paginate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A pagination, filtering and sorting lib for nestjs using mongoose orm",
   "main": "dist/index.js",
   "scripts": {

@@ -90,6 +90,14 @@ You need to run the parameters through `urlencode` to be able to parse the query
 
 `%7B%22userName%22%3A%20%7B%22%24regex%22%3A%20%22%5Etest%22%7D%7D`
 
+
+```
+http://localhost:3000/list?filter={"createdAt":{"$gte":1659916800000,"$lte":1660003140000}}&sort=-createdAt&page=0&limit=100
+```
+$gte and $lte are of number type.
+[Click here to see more details](https://github.com/saemhco/nestjs-mongoose-paginate/blob/main/src/filter/validation.schema.ts)
+
+
 ### Sort
 
 You can specify more than one field for sorting by providing a list of them separated by a semicolon: `createdAt;userName`.
