@@ -18,7 +18,7 @@ export class CounterDto {
 export class CollectionDto {
   @ApiPropertyOptional({
     type: String,
-    description: 'Filter query string, see documentation for its schema',
+    description: 'Filter query string, see documentation for its schema: https://www.npmjs.com/package/@saemhco/nestjs-mongoose-paginate',
   })
   @Transform((v: TransformFnParams) => filterQueryToObject(v.value))
   @IsOptional()
@@ -26,7 +26,7 @@ export class CollectionDto {
   readonly filter?: FilterableParameters;
 
   @ApiPropertyOptional({
-    example: '-createdAt;updatedAt',
+    example: '-createdAt',
     description:
       'Use only allowed properties separated by semicolon; default is ascending created_at; prefix name with hyphen/minus sign to get descending order',
     type: String,
